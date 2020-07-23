@@ -1,7 +1,7 @@
 ﻿# CMakeList.txt : CMake project for StringBenchmarks, include source and define
 # project specific logic here.
 #
-cmake_minimum_required (VERSION 3.8)
+cmake_minimum_required (VERSION 3.11)
 
 # Include Google Benchmark
 include(../cmake/GoogleBenchmark.cmake)
