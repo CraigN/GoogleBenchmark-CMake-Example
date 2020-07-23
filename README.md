@@ -17,9 +17,13 @@ like to be able to produce benchmark data under Windows and Linux.
 The following minimum versions are required to run this example:
 
 * CMake 3.11
-* Visual Studio 2019 with the C++ workload 
-    OR
-  Visual Studio 2019 Build Tools
+* Windows:
+  * Visual Studio 2019 with the C++ workload 
+      OR
+    Visual Studio 2019 Build Tools
+* Linux:
+  * GCC 4.8
+  * Clang 3.4
 
 ## Example
 
@@ -60,7 +64,7 @@ folder.
 
 Open a `x64 Native Tools Command Prompt for VS 2019` and execute the following:
 
-```
+```batch
 mkdir build && cd build
 cmake ../src
 msbuild Benchmarks.sln -p:Configuration=Release
@@ -80,7 +84,7 @@ make
 To run the benchmark execute the following from the `build` folder:
 
 ### Windows
-```
+```batch
 StringBenchmarks\Release\StringBenchmarks.exe
 ```
 
