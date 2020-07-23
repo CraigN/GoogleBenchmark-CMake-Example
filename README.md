@@ -51,8 +51,14 @@ BENCHMARK_MAIN();
 
 The benchmark application needs to be linked against the `benchmark` library to
 run. The build is configured to download the latest `benchmark` library using 
-`Git` and compile it as a dependency. The following steps should build the 
-example using an out-of-source build folder:
+`Git` and compile it as a dependency.
+
+The following steps should build the example using an out-of-source build 
+folder.
+
+### Windows
+
+Open a `x64 Native Tools Command Prompt for VS 2019` and execute the following:
 
 ```
 mkdir build && cd build
@@ -60,12 +66,27 @@ cmake ../src
 msbuild Benchmarks.sln -p:Configuration=Release
 ```
 
+### Linux
+
+Execute the following from a `bash` shell:
+```bash
+mkdir build && cd build
+cmake ../src -DCMAKE_BUILD_TYPE=Release
+make
+```
+
 ## Usage
 
 To run the benchmark execute the following from the `build` folder:
 
+### Windows
 ```
 StringBenchmarks\Release\StringBenchmarks.exe
+```
+
+### Linux
+```bash
+StringBenchmarks/StringBenchmarks
 ```
 
 For additional examples of arguments that can be passed to the test executables
